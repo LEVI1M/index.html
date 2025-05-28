@@ -1,0 +1,143 @@
+
+<!DOCTYPE html><html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantifyLOL - استثمر وارتاح</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #0f0;
+      font-family:  Courier New , Courier, monospace;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 80px;
+    }
+    h1 {
+      color: lime;
+    }
+    .money {
+      color: yellow;
+      font-size: 2em;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .withdrawals, .warning {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid lime;
+    }
+    .warning {
+      color: red;
+      border-color: red;
+    }
+    .nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      background-color: #000;
+      border-top: 2px solid #0f0;
+    }
+    .nav button {
+      flex: 1;
+      padding: 15px;
+      background: #000;
+      color: #0f0;
+      border: none;
+      font-size: 1em;
+    }
+    .section {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .level-box, .task-box {
+      border: 1px solid lime;
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>  <div id="home" class="section active">
+    <h1>QuantifyLOL</h1>
+    <p>أرباحك اليومية مضمونة 1000%* (نجوم الكذب)</p>
+    <div class="money">$0.00</div>
+    <button class="btn" onclick="alert( تم توليد الدورة! )">اضغط هنا لبدء توليد الدورة</button><div class="task-box">
+  <h3>🎥 إعلان ذكاء اصطناعي</h3>
+  <audio controls>
+    <source src="your-ai-voice.mp3" type="audio/mpeg">
+  </audio>
+  <br>
+  <button class="btn">📥 تنزيل التطبيق</button>
+  <button class="btn">📄 ملف الشركة</button>
+  <button class="btn" onclick="showSection( tasks )">🚀 المهام</button>
+</div>
+
+<div class="withdrawals">
+  <h3>آخر السحوبات:</h3>
+  <p>شريف الضحية - 9999$</p>
+  <p>أبو سحب سريع - 7200$</p>
+  <p>ضحكة مستمرة - 6666$</p>
+</div>
+<div class="warning">
+  تنبيه: هذا الموقع ساخر لتوعية الناس من منصات النصب!<br>
+  لا تصدق أي موقع يطلب منك "استثمر وارتاح"!
+</div>
+
+  </div>  <div id="tasks" class="section">
+    <h2>🚀 المهام اليومية</h2>
+    <div>العائد اليومي: 5% من 10$</div>
+    <table border="1" style="margin: 10px auto;">
+      <tr><th>اسم المهمة</th><th>المبلغ المكتسب</th></tr>
+      <tr><td>بدء العمل اليومي</td><td>$0.50</td></tr>
+      <tr><td>مشاهدة إعلان</td><td>$0.30</td></tr>
+      <tr><td>نشر رابط الدعوة</td><td>$0.20</td></tr>
+    </table>
+  </div>  <div id="vip" class="section">
+    <h2>👑 كبار الشخصيات</h2>
+    <div class="level-box">المستوى 1 - 10$ | دخل 5% | لمدة 30 يوم</div>
+    <div class="level-box">المستوى 2 - 50$ | دخل 7% | لمدة 60 يوم</div>
+    <div class="level-box">المستوى 3 - 100$ | دخل 10% | لمدة 90 يوم</div>
+    <div class="level-box">المستوى 4 - 500$ | دخل 15% | لمدة 120 يوم</div>
+    <div class="level-box">المستوى 5 - 1000$ | دخل 20% | لمدة 150 يوم</div>
+    <div class="level-box">المستوى 6 - 5000$ | دخل 25% | لمدة 180 يوم</div>
+    <div class="level-box">المستوى 7 - 10000$ | دخل 30% | لمدة 365 يوم</div>
+  </div>  <div id="invite" class="section">
+    <h2>🔗 دعوة الأصدقاء</h2>
+    <p>انسخ هذا الرابط وشاركه مع أصدقائك:</p>
+    <input type="text" value="https://fakeplatform.io/invite?code=HAHA123" readonly style="width: 90%;">
+  </div>  <div id="profile" class="section">
+    <h2>👤 ملفك الشخصي</h2>
+    <button class="btn">💰 إيداع</button>
+    <button class="btn" onclick="showSection( withdraw )">🏦 سحب</button>
+  </div>  <div id="withdraw" class="section">
+    <h2>💸 سحب الأرباح</h2>
+    <p>اختر الشبكة:</p>
+    <select>
+      <option>TRC20</option>
+      <option>BEP20</option>
+    </select>
+    <br><br>
+    <input type="text" placeholder="أدخل العنوان" style="width: 90%;"><br><br>
+    <input type="number" placeholder="المبلغ ($)" style="width: 90%;"><br><br>
+    <button class="btn">تأكيد السحب</button>
+  </div>  <div class="nav">
+    <button onclick="showSection( home )">🏠 الصفحة الرئيسية</button>
+    <button onclick="showSection( tasks )">📋 المهام</button>
+    <button onclick="showSection( vip )">👑 كبار الشخصيات</button>
+    <button onclick="showSection( invite )">📨 دعوة الأصدقاء</button>
+    <button onclick="showSection( profile )">👤 أنا</button>
+  </div>  <script>
+    function showSection(id) {
+      document.querySelectorAll( .section ).forEach(sec => sec.classList.remove( active ));
+      document.getElementById(id).classList.add( active );
+    }
+  </script></body>
+</html>
